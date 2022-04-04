@@ -9,7 +9,7 @@ for (i = 0; i < rows; i++) {
 
 	let output = allnotes[i];
 
-  $('#table').append('<tr><td>' + output + '</td> </tr>');
+  $('#table').append('<tr style="border: 1px solid black"><td>' + output + '</td> </tr>');
 }
 
 $('#table').append('</table>');
