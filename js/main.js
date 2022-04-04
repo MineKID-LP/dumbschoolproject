@@ -1,8 +1,5 @@
 import * as MM from "./musicmanager.js";
 
-
-console.log(JSON.stringify(MIDI.noteToKey))
-
 document.getElementById("play").onclick = function() {
      MM.play();
 };
