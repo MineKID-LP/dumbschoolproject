@@ -2,15 +2,13 @@
 
 # Libraries
 
-https://tailwindcss.com/ (sugested)
-
-Music JS (Replaced throug MIDI.js)
+JQuery https://jquery.com/
 
 MIDI.js https://github.com/mudcube/
 
 # Inspiration
 
-https://onlinesequencer.net/11851
+https://onlinesequencer.net/
 
 # Songs
 
@@ -22,9 +20,9 @@ https://onlinesequencer.net/2510323 Sand Storm 8/10
 
 https://onlinesequencer.net/2664875 Bad Apple 10/10
 
-#
+#Temp Project host
 
-https://htmlpreview.github.io/?https://raw.githubusercontent.com/MineKID-LP/dumbschoolproject/main/index.html
+https://minekid-lp.github.io/dumbschoolproject/
 
 #
 
