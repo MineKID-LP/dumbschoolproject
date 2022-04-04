@@ -1,13 +1,13 @@
 let sounds = [];
 
-function Sound(tone, timing, duration) {
-     this.tone = tone;
+function Sound(note, timing, duration) {
+     this.note = note;
      this.timing = timing;
      this.duration = duration;
 }
 
-function addSound(tone, timing, duration) {
-     sounds.push(new Sound(tone, timing, duration));
+function addSound(note, timing, duration) {
+     sounds.push(new Sound(note, timing, duration));
      sounds = sortNotes();
 }
 
@@ -22,22 +22,8 @@ function stop() {
 }
 
 function playnote(note, start, end) {
-     return false //GO AWAY
-     var frequency = Note.fromLatin(note).frequency();
-     var context = new AudioContext();
-     var oscillator = context.createOscillator();
-     var gain = context.createGain();
-
-     oscillator.frequency.value = frequency;
-
-     //Types: sine square triangle sawtooth
-     oscillator.type = "sine";
-
-     oscillator.connect(gain); //WTF is that shi*
-     gain.connect(context.destination); //What does that mean
-
-     oscillator.start(start);
-     oscillator.stop(end + start);
+     MIDI.noteOn(0, note, 1000, start);
+     MIDI.noteOff(0, note, end);
 }
 
 export {
