@@ -1,7 +1,6 @@
-.wrapperclass{
-     background-color: gray;
-}
-
-.itemclass{
-     background-color: whitesmoke;
+.box {
+  height: 10%;
+  width: 125px;
+  text-align: center;
+  border: 1px solid black;
 }
