@@ -20,7 +20,7 @@ https://onlinesequencer.net/2510323 Sand Storm 8/10
 
 https://onlinesequencer.net/2664875 Bad Apple 10/10
 
-#Temp Project host
+# Temp Project host
 
 https://minekid-lp.github.io/dumbschoolproject/
 
