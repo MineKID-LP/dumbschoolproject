@@ -14,5 +14,4 @@ for (i = 0; i < allnotes.length; i++) {
 	$('#table').append(`<tr style="border: 1px solid black"><td id="key_${21 + i}" class="key" onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</td></tr>`);
 }
 
-
 $('#table').append('</table>');
