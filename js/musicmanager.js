@@ -2,7 +2,7 @@ let sounds = [];
 let ready = false;
 
 MIDI.loadPlugin({
-  soundfontUrl: "./js/",
+  soundfontUrl: "./js/instruments/",
   instrument: "acoustic_grand_piano",
   onsuccess: function() { start() }
 });
@@ -40,7 +40,7 @@ function playnote(note, start, end) {
      MIDI.noteOff(0, note, end);
 }
 
-export {
+let MM = {
      addSound,
      play,
      Sound,
