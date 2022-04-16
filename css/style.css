@@ -7,3 +7,17 @@
 html,body{
   height:100%;
 }
+.key{
+     border: 3px outset black;
+     min-width: 50px;
+     text-align: center;
+     font-size: 18px;
+}
+.key:hover{
+     border: 3px groove black;
+     background-color: #969696;
+}
+.key:active{
+     border: 3px inset black;
+     background-color: #424242;
+}
