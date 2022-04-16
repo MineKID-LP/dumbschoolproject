@@ -1,5 +1,3 @@
-import * as MM from "./musicmanager.js";
-
 document.getElementById("play").onclick = function() {
      //temp
      MM.addSound(document.getElementById('note').value, document.getElementById('delay').value, 1)

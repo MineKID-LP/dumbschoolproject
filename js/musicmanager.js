@@ -40,7 +40,7 @@ function playnote(note, start, end) {
      MIDI.noteOff(0, note, end);
 }
 
-export {
+let MM = {
      addSound,
      play,
      Sound,
