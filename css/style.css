@@ -12,6 +12,10 @@ html,body{
      min-width: 50px;
      text-align: center;
      font-size: 18px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
 }
 .key:hover{
      border: 3px groove black;
