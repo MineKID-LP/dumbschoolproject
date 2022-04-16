@@ -2,7 +2,7 @@ let sounds = [];
 let ready = false;
 
 MIDI.loadPlugin({
-  soundfontUrl: "./js/",
+  soundfontUrl: "./js/instruments/",
   instrument: "acoustic_grand_piano",
   onsuccess: function() { start() }
 });
