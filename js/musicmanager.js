@@ -1,4 +1,19 @@
 let sounds = [];
+let ready = false;
+
+MIDI.loadPlugin({
+  soundfontUrl: "./js/",
+  instrument: "acoustic_grand_piano",
+  onsuccess: function() { start() }
+});
+
+function start() {
+     MIDI.noteOn(0, 72, 1000, 0);
+     MIDI.noteOn(0, 74, 1000, 0.25);
+     MIDI.noteOn(0, 76, 1000, 0.5);
+     ready = true;
+}
+
 
 function Sound(note, timing, duration) {
      this.note = note;
@@ -8,7 +23,6 @@ function Sound(note, timing, duration) {
 
 function addSound(note, timing, duration) {
      sounds.push(new Sound(note, timing, duration));
-     sounds = sortNotes();
 }
 
 function play() {
@@ -31,5 +45,6 @@ export {
      play,
      Sound,
      playnote,
-     stop
+     stop,
+     ready
 };
