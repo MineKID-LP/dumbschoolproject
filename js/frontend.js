@@ -7,10 +7,12 @@ let allnotes = ["A0", "Hh0", "H0", "C1", "Dh1", "D1", "Eh1", "E1", "F1", "Gh1", 
   "C7", "Dh7", "D7", "Eh7", "E7", "F7", "Gh7", "G7", "Ah7", "A7", "Hh7", "H7", "C8"
 ];
 
+let maxrows = 10;
+
 for (i = -1; i < allnotes.length; i++) {
   $('#field').append(`<div id="row"><div class="no-wrapping" id="${i + 100}"></div>`);
   if (i == -1) {
-    for (let row = 0; row < 8; row++) {
+    for (let row = 0; row < maxrows; row++) {
       if (row == 0) {
         $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       } else {
@@ -19,7 +21,7 @@ for (i = -1; i < allnotes.length; i++) {
     }
   } else {
     $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><div id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div></div>`);
-    for (j = 0; j < 7 * 4; j++) { //row = 7 * 4cells
+    for (j = 0; j < (maxrows - 1) * 4; j++) { //row = 7 * 4cells
       $(`#${100 + i}`).append('<div class="cell"></div>')
     }
   }
