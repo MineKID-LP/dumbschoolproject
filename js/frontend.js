@@ -12,15 +12,15 @@ for (i = -1; i < allnotes.length; i++) {
   if (i == -1) {
     for (let row = 0; row < 8; row++) {
       if (row == 0) {
-        $(`#${i + 100}`).append(`<div id="cell">${row}</div>`)
+        $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       } else {
-        $(`#${i + 100}`).append(`<div id="cell" style="width:203px">${row}</div>`)
+        $(`#${i + 100}`).append(`<div class="cell" style="width:203px; border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       }
     }
   } else {
-    $(`#${i + 100}`).append(`<div id="cell"><div id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div></div>`);
-    for (j = 0; j < 7 * 4; j++) {
-      $(`#${100 + i}`).append('<div id="cell"></div>')
+    $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><div id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div></div>`);
+    for (j = 0; j < 7 * 4; j++) { //row = 7 * 4cells
+      $(`#${100 + i}`).append('<div class="cell"></div>')
     }
   }
   $('#field').append('</div>')
