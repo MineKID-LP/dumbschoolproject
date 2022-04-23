@@ -8,40 +8,16 @@ let allnotes = ["A0", "Hh0", "H0", "C1", "Dh1", "D1", "Eh1", "E1", "F1", "Gh1", 
 ];
 
 for (i = -1; i < allnotes.length; i++) {
-  $('#field').append(`<div id="${i}">`);
+  $('#field').append(`<div id="${i + 100}">`);
   if (i == -1) {
     for (let row = 0; row < 2; row++) {
-      $(`#${i}`).append(`<div id="cell">${row}</div>`)
+      $(`#${i + 100}`).append(`<div id="cell">${row}</div>`)
     }
   } else {
-    for (let j = 0; j < 1; j++) {
-      if (j == 0) {
-        $(`#${i}`).append(`<div style="border: 1px solid black"; id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div>`);
-      } else {
-        for (k = 0; k < 4; k++) {
-          $(`#${i}`).append(`<div id="cell"></div>`)
-        }
-      }
+    $(`#${i + 100}`).append(`<div style="border: 1px solid black"; id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div>`);
+    for (j = 0; j < 8; j++) {
+      $(`#${21 + i}`).append('<div class="cell"></div>')
     }
   }
   $('#field').append('</div>')
 }
-
-/*for (rows = 0; rows < 10; rows++) {
-  $('#table').append(` < span id = "row" > $ {
-      rows
-    }
-    `);
-  if (rows == 0) {
-    for (i = 0; i < allnotes.length; i++) {
-      $('#row').append(` < div style = "border: 1px solid black" > < td id = "key_${21 + i}"
-    class = "key"
-    onclick = "MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)" > $ {
-      allnotes[i]
-    } < /div>`);
-  }
-} else {
-  $('#row').append(`<div id="cell"></div>`);
-}
-$('#table').append('</span>');
-}*/
