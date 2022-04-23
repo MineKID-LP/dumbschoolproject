@@ -8,13 +8,13 @@ let allnotes = ["A0", "Hh0", "H0", "C1", "Dh1", "D1", "Eh1", "E1", "F1", "Gh1", 
 ];
 
 for (i = -1; i < allnotes.length; i++) {
-  $('#field').append(`<div id="row"><div id="${i + 100}"></div>`);
+  $('#field').append(`<div id="row"><div class="no-wrapping" id="${i + 100}"></div>`);
   if (i == -1) {
     for (let row = 0; row < 8; row++) {
       if (row == 0) {
         $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       } else {
-        $(`#${i + 100}`).append(`<div class="cell" style="width:203px; border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
+        $(`#${i + 100}`).append(`<div class="cell" style="width:201px; border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       }
     }
   } else {

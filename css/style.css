@@ -8,6 +8,7 @@ html,body{
   height:100%;
   padding: 0px;
   margin: 0px;
+  white-space: nowrap;
 }
 .key{
      text-align: center;
@@ -35,7 +36,7 @@ html,body{
 }
 
 #row{
-    display:table-row;
+    display: flex;
     width: auto;
     clear: both;
 }
@@ -48,7 +49,15 @@ html,body{
   float: left;
   margin: 0px auto;
   padding: 0px;
-  display: grid;
+  display: inline;
   align-content: center;
   justify-content: center;
+}
+
+.no-wrapping{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow: hidden;
 }
