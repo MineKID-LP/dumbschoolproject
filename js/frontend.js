@@ -29,14 +29,12 @@ for (i = -1; i < allnotes.length; i++) {
 }
 
 function anal_insert(id) {
-  anal_destruction({
-    x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
-    y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
-  });
   if (document.getElementById(id.id).style.backgroundColor != "rgb(167, 167, 167)") {
     document.getElementById(id.id).style.backgroundColor = "#a7a7a7";
+    anal_destruction({x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())});
   } else {
     document.getElementById(id.id).style.backgroundColor = "#ffffff";
+    anal_delete({x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())})
   }
 }
 
@@ -45,8 +43,19 @@ function anal_destruction(xy) {
   MM.playnote(xy.y, 0)
 }
 
+<<<<<<< HEAD
 function anal_update(xy) {
   for (i = 0; i < givenrow; i++) {
 
   }
 }
+=======
+function anal_delete(xy){
+	xy.y += 21;
+	MM.removeNote(xy.y, xy.x * 0.25)
+}
+
+let FRONTEND = {
+	anal_update
+}
+>>>>>>> b95de1e1e67ed74860e3e8b2c23d4dd0c08c3951
