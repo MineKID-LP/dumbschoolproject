@@ -22,17 +22,22 @@ for (i = -1; i < allnotes.length; i++) {
 	} else {
 		$(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><span id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</span></div>`);
 		for (j = 0; j < (maxrows - 1) * 4; j++) { //row = maxrows * 4cells
-			$(`#${100 + i}`).append(`<div class="cell" id="${j + 1000 * i}" onclick="anal_insert(${j + 1000 * i})"></div>`)
+			$(`#${100 + i}`).append(`<div class="cell" id="${"dick" + j + "mongo" + i}" onclick="anal_insert(${"dick" + j + "mongo" + i})"></div>`)
 		}
 	}
-	$('#field').append('</div>')
+	$('#field').append('</div>');
 }
 
 function anal_insert(id) {
-	console.log(id)
-	if (document.getElementById(id).style.backgroundColor != "rgb(167, 167, 167)") {
-		document.getElementById(id).style.backgroundColor = "#a7a7a7";
+	anal_destruction({x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()), y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())});
+	if (document.getElementById(id.id).style.backgroundColor != "rgb(167, 167, 167)") {
+		document.getElementById(id.id).style.backgroundColor = "#a7a7a7";
 	} else {
-		document.getElementById(id).style.backgroundColor = "#ffffff";
+		document.getElementById(id.id).style.backgroundColor = "#ffffff";
 	}
+}
+
+function anal_destruction(xy){
+	xy.y += 21;
+	console.log(xy)
 }
