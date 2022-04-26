@@ -47,3 +47,7 @@ function anal_delete(xy){
 	xy.y += 21;
 	MM.removeNote(xy.y, xy.x * 0.25)
 }
+
+let FRONTEND = {
+	anal_update
+}
