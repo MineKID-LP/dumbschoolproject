@@ -10,7 +10,7 @@ let allnotes = ["A0", "Hh0", "H0", "C1", "Dh1", "D1", "Eh1", "E1", "F1", "Gh1", 
 let maxrows = 10;
 
 for (i = -1; i < allnotes.length; i++) {
-  $('#field').append(`<div id="row"><div class="no-wrapping" id="${i + 100}"></div>`);
+  $('#field').append(`<div class="row" id="${i + 100}"></div>`);
   if (i == -1) {
     for (let row = 0; row < maxrows; row++) {
       if (row == 0) {
