@@ -42,5 +42,5 @@ function anal_insert(id) {
 
 function anal_destruction(xy){
 	xy.y += 21;
-	MM.playnote(xy.y, 0)
+	MM.addNote(xy.y, xy.x * 0.25)
 }

@@ -8,26 +8,22 @@ MIDI.loadPlugin({
 });
 
 function start() {
-     MIDI.noteOn(0, 72, 1000, 0);
-     MIDI.noteOn(0, 74, 1000, 0.25);
-     MIDI.noteOn(0, 76, 1000, 0.5);
      ready = true;
 }
 
 
-function Sound(note, timing, duration) {
+function Sound(note, timing) {
      this.note = note;
      this.timing = timing;
-     this.duration = duration;
 }
 
-function addSound(note, timing, duration) {
-     sounds.push(new Sound(note, timing, duration));
+function addNote(note, timing) {
+     sounds.push(new Sound(note, timing));
 }
 
 function play() {
      sounds.forEach((item, i) => {
-          playnote(item.tone, item.timing, item.duration);
+          playnote(item.tone, item.timing);
      });
 }
 
@@ -35,15 +31,15 @@ function stop() {
      return alert("Nein")
 }
 
-function playnote(note, start) {
+function playNote(note, start) {
      MIDI.noteOn(0, note, 1000, start);
 }
 
 let MM = {
-     addSound,
+     addNote,
      play,
      Sound,
-     playnote,
+     playNote,
      stop,
      ready
 };
