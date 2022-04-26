@@ -58,6 +58,6 @@ let FRONTEND = {
   anal_update
 }
 
-function anal_update() {
+function anal_update(x) {
 
 }
