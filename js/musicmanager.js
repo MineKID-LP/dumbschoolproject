@@ -21,6 +21,10 @@ function addNote(note, timing) {
      sounds.push(new Sound(note, timing));
 }
 
+function removeNote(note, timing){
+     sounds.filter(item => item != new Sound(note, timing))
+}
+
 function play() {
      sounds.forEach((item, i) => {
           playnote(item.tone, item.timing);
