@@ -39,5 +39,5 @@ function anal_insert(id) {
 
 function anal_destruction(xy){
 	xy.y += 21;
-	console.log(xy)
+	MM.playnote(xy.y, 0)
 }

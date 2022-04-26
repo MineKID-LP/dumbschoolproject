@@ -35,9 +35,8 @@ function stop() {
      return alert("Nein")
 }
 
-function playnote(note, start, end) {
+function playnote(note, start) {
      MIDI.noteOn(0, note, 1000, start);
-     MIDI.noteOff(0, note, end);
 }
 
 let MM = {
