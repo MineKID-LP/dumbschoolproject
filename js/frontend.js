@@ -20,10 +20,18 @@ for (i = -1; i < allnotes.length; i++) {
       }
     }
   } else {
-    $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><div id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</div></div>`);
-    for (j = 0; j < (maxrows - 1) * 4; j++) { //row = 7 * 4cells
-      $(`#${100 + i}`).append('<div class="cell"></div>')
+    $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><span id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</span></div>`);
+    for (j = 0; j < (maxrows - 1) * 4; j++) { //row = maxrows * 4cells
+      $(`#${100 + i}`).append(`<div class="cell" id="${j + 1000 * i}" onclick="anal_insert(${j + 1000 * i})"></div>`)
     }
   }
   $('#field').append('</div>')
+}
+
+function anal_insert(id) {
+  if (document.getElementById(id).style.backgroundColor != "#a7a7a7") {
+    document.getElementById(id).style.backgroundColor = "#a7a7a7";
+  } else if (document.getElementById(id).style.backgroundColor == "#a7a7a7") {
+    document.getElementById(id).style.backgroundColor = "#ffffff";
+  }
 }
