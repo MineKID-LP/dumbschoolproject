@@ -20,7 +20,7 @@ for (i = -1; i < allnotes.length; i++) {
       }
     }
   } else {
-    $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><span id="key_${21 + i}"; class="key"; onclick="MM.playnote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</span></div>`);
+    $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><span id="key_${21 + i}"; class="key"; onclick="MM.playNote(parseInt(this.id.replace('key_', '')), 0, 2)">${allnotes[i]}</span></div>`);
     for (j = 0; j < (maxrows - 1) * 4; j++) { //row = maxrows * 4cells
       $(`#${100 + i}`).append(`<div class="cell" id="${"dick" + j + "mongo" + i}" onclick="anal_insert(${"dick" + j + "mongo" + i})"></div>`)
     }
