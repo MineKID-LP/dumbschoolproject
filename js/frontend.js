@@ -7,12 +7,12 @@ let allnotes = ["A0", "Hh0", "H0", "C1", "Dh1", "D1", "Eh1", "E1", "F1", "Gh1", 
      "C7", "Dh7", "D7", "Eh7", "E7", "F7", "Gh7", "G7", "Ah7", "A7", "Hh7", "H7", "C8"
 ];
 
-let maxrows = 20;
+let maxrows = 10;
 
 for (i = -1; i < allnotes.length; i++) {
      $('#field').append(`<div class="row" id="${i + 100}"></div>`);
      if (i == -1) {
-          for (let row = 0; row < maxrows; row++) {
+          for (let row = 0; row <= maxrows; row++) {
                if (row == 0) {
                     $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid"><button onclick="MM.play()">Play</button></div>`)
                } else {
