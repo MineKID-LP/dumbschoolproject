@@ -1,4 +1,4 @@
-let sounds = [], song = [];
+let sounds = [];
 let ready = false;
 
 MIDI.loadPlugin({
@@ -32,12 +32,13 @@ function play() {
 }
 
 function stop() {
-     return alert("")
+     return alert("WIP")
+     //If someone tells me why some asshole with a yee yee ass hair cut decieded it would be a good idea to not document their library I'll be happy.
 }
 
 function playNote(note, start) {
      MIDI.noteOn(0, note, 1000, start);
-     MIDI.noteOff(0, note, 1.6);
+     // MIDI.noteOff(0, note, 1.6); Why, why are you cutting the song off. Fuck that shit!
 }
 
 let MM = {
@@ -48,5 +49,15 @@ let MM = {
      removeNote,
      playNote,
      stop,
-     ready
+     ready,
+     loadSong
 };
+
+function loadSong(json) {
+     try {
+          sounds = JSON.parse(json)
+     } catch (e) {
+          return e
+     }
+     return "Loaded successfully!"
+}
