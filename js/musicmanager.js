@@ -32,7 +32,7 @@ function play() {
 }
 
 function stop() {
-     return alert("Nein")
+     return alert("")
 }
 
 function playNote(note, start) {
@@ -43,6 +43,7 @@ let MM = {
      addNote,
      play,
      Sound,
+     removeNote,
      playNote,
      stop,
      ready
