@@ -1,4 +1,4 @@
-let sounds = [];
+let sounds = [], song = [];
 let ready = false;
 
 MIDI.loadPlugin({
