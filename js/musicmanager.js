@@ -32,7 +32,7 @@ function play() {
 }
 
 function stop() {
-     return alert("Nein")
+     return alert("")
 }
 
 function playNote(note, start) {
