@@ -31,6 +31,7 @@ for (i = -1; i < allnotes.length; i++) {
 function anal_insert(id) {
   if (document.getElementById(id.id).style.backgroundColor != "rgb(167, 167, 167)") {
     document.getElementById(id.id).style.backgroundColor = "#a7a7a7";
+    document.getElementById(id.id).style.backgroundColor = `${allnotes.[parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())]}`;
     anal_destruction({
       x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
       y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
