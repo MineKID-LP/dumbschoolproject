@@ -46,7 +46,7 @@ function anal_insert(id) {
 
 function anal_destruction(xy) {
   xy.y += 21;
-  MM.playnote(xy.y, 0)
+  MM.addNote(xy.y, 0)
 }
 
 function anal_delete(xy) {
@@ -62,4 +62,8 @@ function anal_update(x) {
   for (i = 0; i < allnotes.length; i++) {
     document.getElementById("dick" + x + "mongo" + i).style.backgroundColor = "aqua";
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e2a2ad6567a56298171a08aaddd80c7db6033aa0
