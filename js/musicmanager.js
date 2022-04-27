@@ -27,7 +27,7 @@ function removeNote(note, timing){
 
 function play() {
      sounds.forEach((item, i) => {
-          playnote(item.tone, item.timing);
+          playNote(item.note, item.timing)
      });
 }
 
@@ -37,10 +37,12 @@ function stop() {
 
 function playNote(note, start) {
      MIDI.noteOn(0, note, 1000, start);
+     MIDI.noteOff(0, note, 1.6);
 }
 
 let MM = {
      addNote,
+     sounds,
      play,
      Sound,
      removeNote,
