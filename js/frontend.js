@@ -62,8 +62,3 @@ function anal_update(x) {
   for (i = 0; i < allnotes.length; i++) {
     document.getElementById("dick" + x + "mongo" + i).style.backgroundColor = "aqua";
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> a15e8372dd1e5b95081e2c4a9a85ce56b37bf470
