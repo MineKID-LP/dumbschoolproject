@@ -29,19 +29,21 @@ for (i = -1; i < allnotes.length; i++) {
 }
 
 function anal_insert(id) {
-     if (document.getElementById(id.id).style.backgroundColor != "rgb(167, 167, 167)") {
-          document.getElementById(id.id).style.backgroundColor = "#a7a7a7";
-          anal_destruction({
-               x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
-               y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
-          });
-     } else {
-          document.getElementById(id.id).style.backgroundColor = "#ffffff";
-          anal_delete({
-               x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
-               y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
-          })
-     }
+  if (document.getElementById(id.id).style.backgroundColor != "rgb(167, 167, 167)") {
+    document.getElementById(id.id).style.backgroundColor = "#a7a7a7";
+    document.getElementById(id.id).innerHTML = allnotes[parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())];
+    anal_destruction({
+      x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
+      y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
+    });
+  } else {
+    document.getElementById(id.id).style.backgroundColor = "#ffffff";
+    document.getElementById(id.id).innerHTML = "";
+    anal_delete({
+      x: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').shift()),
+      y: parseInt(id.id.toString().replaceAll('dick', '').split('mongo').pop())
+    })
+  }
 }
 
 function anal_destruction(xy) {
