@@ -32,7 +32,7 @@ function play() {
 }
 
 function stop() {
-     return alert("WIP")
+     (confirm("Der Fortschritt wird entfernt.")) ? window.location.reload() : start(); // this may screw us over but fuck it
      //If someone tells me why some asshole with a yee yee ass hair cut decieded it would be a good idea to not document their library I'll be happy.
 }
 
@@ -43,7 +43,6 @@ function playNote(note, start) {
 
 let MM = {
      addNote,
-     sounds,
      play,
      Sound,
      removeNote,
