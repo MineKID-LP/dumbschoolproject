@@ -4,6 +4,11 @@
   text-align: center;
   border: 1px solid black;
 }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html,body{
   height:100%;
   padding: 0px;

@@ -16,7 +16,7 @@ for (i = -1; i < allnotes.length; i++) {
       if (row == 0) {
         $(`#${i + 100}`).append(`<div class="cell" style="border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       } else {
-        $(`#${i + 100}`).append(`<div class="cell" style="width:201px; border-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
+        $(`#${i + 100}`).append(`<div class="cell" style="width:201px; outline-right: black 3px solid; border-bottom: 3px black solid">${row}</div>`)
       }
     }
   } else {
